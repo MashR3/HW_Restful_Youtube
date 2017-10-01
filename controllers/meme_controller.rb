@@ -10,7 +10,7 @@ class MemesMethod < Sinatra::Base
 
 
 	get '/memes' do
-		@page_header = "R&B Music"
+		@page_header = "Funny Videos"
 		@vids = MemeTube.all
 		erb :"memes/index"
 	end

@@ -2,13 +2,21 @@
 
 <form action="/posts/<%= @vids.id %>" method="POST">
   
-  <label for="title">Title: </label>
+  <label for="title">New Title: </label>
   <input type="text" name="title" value="<%= @vids.title %>">
 
-  <label for="description">Description: </label>
+  <label for="description">New Description: </label>
   <input type="text" name="description" value="<%= @vids.description %>">
 
-  <input type="hidden" name="_method" value="PUT">
+  <label for="url">New Embed URL: </label>
+  <input type="text" name="url" value="<%= @vids.url %>">
+
+  <label for="genre">New Genre: </label>
+  <input type="text" name="genre" value="<%= @vids.genre %>">
+
+
+
+  <input class="button" type="hidden" name="_method" value="PUT">
 
   <input type="submit" value="Update">
 </form>

@@ -1,19 +1,81 @@
 body {
-	background-image: url(../photos/pbck.jpg);
+	background-image: url(../photos/obg.jpg);
 	background-size: cover;
 	font-family: Georgia;
-	color: blue;
+	color: #3800ff;
 	text-align: center;
 }
 
 h1 {
+	background-color: #c0e2ff;
 	font-size: 60px;
+	width: 700px;
+	margin: 0 auto;
+	border-radius: 10px;
+	display: inline-block;
+	border: solid 5px black;
 }
 
-h2 {
+/*h2 {
 	font-size: 30px;
+	background-color: white;
 }
+
+h3 {
+	background-color: white;
+}
+
+h4 {
+	background-color: white;
+}
+
+p {
+	background-color: white;
+}*/
 
 #vidtit {
 	font-size: 30px;
+}
+
+#pic1 {
+	background-image: url(../photos/kerm1.png);
+	background-size: contain;
+	height: 100px;
+	width: 144px;
+	display: inline-block;
+}
+
+#pic2 {
+	background-image: url(../photos/kerm2.png);
+	background-size: contain;
+	height: 100px;
+	width: 130px;
+	display: inline-block;
+}
+
+.button {
+    background-color: red; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    padding-top: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    height: 50px;
+}
+
+.button2 {
+    background-color: red; 
+    border: none;
+    display: inline-block;
+    color: white;
+    padding: 15px 32px;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    height: 20px;
+    width: 59px;
 }
