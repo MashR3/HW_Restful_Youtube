@@ -1,4 +1,4 @@
-require 'pg'
+
 
 class MemeTube
 
@@ -24,9 +24,9 @@ class MemeTube
 
 	end
 
+	# NEW
 	def self.hydrate vids_data
-		vids = MemesMethod.new
-
+		vids = MemeTube.new
 		vids.id = vids_data['id']
 		vids.title = vids_data['title']
 		vids.url = vids_data['url']
@@ -35,6 +35,7 @@ class MemeTube
 
 		vids
 	end
+
 
 	#SHOW
 
@@ -50,7 +51,7 @@ class MemeTube
 
 	#CREATE & UPDATE
 	def save 
-		conn = MemesMethod.open_connection
+		conn = MemeTube.open_connection
 		if !self.id 
 			sql = "INSERT INTO vids (url, title, description, genre) VALUES ('#{self.url}', '#{self.title}', '#{self.description}', '#{self.genre}')"
 		else

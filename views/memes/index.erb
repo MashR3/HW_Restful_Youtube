@@ -3,14 +3,19 @@
 	
 <% @vids.each do |vids| %>
 
-	<p> <%= vids.body %></p>
-	<a href="memes/<%= vids.id %>"<h2><%= vids.title %></h2></a>
-	<a href="memes/<%= vids.id %>/edit">Edit</a> 
+	<hr>
 
+	<a href="memes/<%= vids.id %>"<h1><%= vids.title %></h1></a>
+	<p> <%= vids.description %></p>
+	<a href="memes/<%= vids.id %>/edit">Edit</a> 
 
 	<form action="/memes/<%= vids.id %>" method="POST">
 		<input type="hidden" name="_method" value="DELETE">
 		<input type="submit" value="DELETE">
 	</form>
+
+	
+		<iframe width="560" height="315" src="<%= vids.url %>" frameborder="0" allowfullscreen> </iframe>
+	</hr>
 
 <% end %>
