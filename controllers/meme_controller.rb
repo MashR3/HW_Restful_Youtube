@@ -30,7 +30,7 @@ class MemesMethod < Sinatra::Base
 
 
 	post "/memes" do
-		new_vids = Memestube.new
+		new_vids = Memetube.new
 		new_vids.title = params[:title]
 		new_vids.description = params[:description]
 		new_vids.url = params[:url]
@@ -51,7 +51,7 @@ class MemesMethod < Sinatra::Base
 	# EDIT UPDATE
 	put "/memes/:id" do
 		
-		vids = Memestube.find(params[:id])
+		vids = Memetube.find(params[:id])
 		vids.title = params[:title]
 		vids.description = params[:description]
 		vids.url = params[:url]
@@ -61,9 +61,9 @@ class MemesMethod < Sinatra::Base
 		redirect "/vids/#{vids.id}"
 	end
 
-	delete '/vids/:id' do
+	delete '/memes/:id' do
 		MemeTube.destroy(params[:id])
-		redirect "/vids"
+		redirect "/memes"
 	end
 
 
