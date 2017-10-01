@@ -1,0 +1,16 @@
+
+<h1><%= @page_header %></h1>
+	
+<% @vids.each do |vids| %>
+
+	<p> <%= vids.body %></p>
+	<a href="memes/<%= vids.id %>"<h2><%= vids.title %></h2></a>
+	<a href="memes/<%= vids.id %>/edit">Edit</a> 
+
+
+	<form action="/memes/<%= vids.id %>" method="POST">
+		<input type="hidden" name="_method" value="DELETE">
+		<input type="submit" value="DELETE">
+	</form>
+
+<% end %>
