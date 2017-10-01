@@ -1,12 +1,17 @@
 
-<h1><%= @page_header %></h1>
+<h2><%= @page_header %></h2>
 	
 <% @vids.each do |vids| %>
 
 	<hr>
 
-	<a href="memes/<%= vids.id %>"<h1><%= vids.title %></h1></a>
+	<a id="vidtit" href="memes/<%= vids.id %>"<h2><%= vids.title %></h2></a>
 	<p> <%= vids.description %></p>
+
+	<!-- <iframe width="640" height="480" src="<%= vids.url %>" frameborder="0" allowfullscreen> </iframe> -->
+	<iframe width="560" height="315" src="<%= vids.url %>" frameborder="0" allowfullscreen></iframe>
+
+
 	<a href="memes/<%= vids.id %>/edit">Edit</a> 
 
 	<form action="/memes/<%= vids.id %>" method="POST">
@@ -14,8 +19,8 @@
 		<input type="submit" value="DELETE">
 	</form>
 
-	
-		<iframe width="560" height="315" src="<%= vids.url %>" frameborder="0" allowfullscreen> </iframe>
 	</hr>
 
 <% end %>
+
+

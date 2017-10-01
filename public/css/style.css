@@ -1,0 +1,19 @@
+body {
+	background-image: url(../photos/pbck.jpg);
+	background-size: cover;
+	font-family: Georgia;
+	color: blue;
+	text-align: center;
+}
+
+h1 {
+	font-size: 60px;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+#vidtit {
+	font-size: 30px;
+}

@@ -1,11 +1,12 @@
 
 <h1> <%= @page_header %></h1>
 <h2> <%= @vids.title %></h2>
-
+<h4> <%= @vids.description %></h4>
 
 <hr>
-<iframe width="560" height="315" src="<%= @vids.url %>" frameborder="0" allowfullscreen>
+
+<iframe width="640" height="480" src="<%= @vids.url %>" frameborder="0" allowfullscreen>
+
 </hr>
 
 
-<p> <%= @vids.description %></p>

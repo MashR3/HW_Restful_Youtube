@@ -58,7 +58,7 @@ class MemesMethod < Sinatra::Base
 		vids.genre = params[:genre]
 		vids.save
 
-		redirect "/vids/#{vids.id}"
+		redirect "/memes/#{memes.id}"
 	end
 
 	delete '/memes/:id' do
